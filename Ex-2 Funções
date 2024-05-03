@@ -1,0 +1,19 @@
+def calcMedia(n1, n2, n3):
+    media = (n1 + n2 + n3) / 3
+    return media
+
+def verifAprov(media):
+    if media >= 7:
+        return True
+    else:
+        return False
+
+n1 = int(input("Digite a primeira nota: "))
+n2 = int(input("Digite a segunda nota: "))
+n3 = int(input("Digite a terceira nota: "))
+
+media = calcMedia(n1, n2, n3)
+if verifAprov(media):
+    print("Aprovado")
+else:
+    print("Reprovado")
