@@ -7,4 +7,4 @@ nota2 = int(input("Digite a segunda nota: "))
 nota3 = int(input("Digite a terceira nota: "))
 
 media = calcMedia(nota1, nota2, nota3)
-print("A média é: ", media)
+print(f"A média é: {media}")
