@@ -1,0 +1,10 @@
+def calcMedia(nota1, nota2, nota3):
+    media = (nota1 + nota2 + nota3) / 3
+    return media
+
+nota1 = int(input("Digite a primeira nota: "))
+nota2 = int(input("Digite a segunda nota: "))
+nota3 = int(input("Digite a terceira nota: "))
+
+media = calcMedia(nota1, nota2, nota3)
+print("A média é: ", media)
