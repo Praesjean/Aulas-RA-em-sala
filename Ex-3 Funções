@@ -1,0 +1,10 @@
+def pegarMaior(a, b, c):
+    maior = max(a, b, c)
+    return maior
+
+a = int(input("Digite a primeiro número: "))
+b = int(input("Digite a segund0 número: "))
+c = int(input("Digite a terceiro número: "))
+
+maior = pegarMaior(a, b, c)
+print(f"O maior número é: {maior}")
