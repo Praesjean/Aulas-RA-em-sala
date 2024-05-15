@@ -1,0 +1,104 @@
+votosCs2 = 0
+idadeCs2 = 0
+mediaCs2 = 0
+votosDota2 = 0
+idadeDota2 = 0
+mediaDota2 = 0
+votosLol = 0
+idadeLol = 0
+mediaLol = 0
+votosValorant = 0
+idadeValorant = 0
+mediaValorant = 0
+votosGeral = 0
+idadeGeral = 0
+MediaGeral = 0
+listaCs2 = ['CS2', votosCs2, mediaCs2]
+listaDota2 = ['Dota 2', votosDota2, mediaDota2]
+listaLol = ['LOL', votosLol, mediaLol]
+listaValorant = ['Valorant', votosValorant, mediaValorant]
+
+def menu():
+    return print("\nVote no seu favorito: \n1-CS2, 2- Dota2, 3- Lol, 4- Valorant, 5- Sair")
+
+def maior():
+    if votosCs2 > votosDota2 and votosCs2 > votosLol and votosCs2 > votosValorant:
+        return print(f"O mais votado é: CS2 com {votosCs2} votos")
+    elif votosDota2 > votosCs2 and votosDota2 > votosLol and votosDota2 > votosValorant:
+        return print(f"O mais votado é: Dota 2 com {votosDota2} votos")
+    elif votosLol > votosCs2 and votosLol > votosDota2 and votosLol > votosValorant:
+        return print(f"O mais votado é: Lol com {votosLol} votos")
+    elif votosValorant > votosCs2 and votosValorant > votosDota2 and votosValorant > votosLol:
+        return print(f"O mais votado é: Valorant com {votosValorant} votos")
+    
+def menor():
+    if votosCs2 < votosDota2 and votosCs2 < votosLol and votosCs2 < votosValorant:
+        return print(f"O menos votado é: CS2 com {votosCs2} votos")
+    elif votosDota2 < votosCs2 and votosDota2 < votosLol and votosDota2 < votosValorant:
+        return print(f"O menos votado é: Dota 2 com {votosDota2} votos")
+    elif votosLol < votosCs2 and votosLol < votosDota2 and votosLol < votosValorant:
+        return print(f"O menos votado é: Lol com {votosLol} votos")
+    else:
+        votosValorant < votosCs2 and votosValorant < votosDota2 and votosValorant < votosLol
+        return print(f"O menos votado é: Valorant com {votosValorant} votos")
+
+def empate():
+    if votosCs2 == votosDota2 or votosCs2 == votosLol or votosCs2 == votosValorant:
+        return print(f"Empate com {votosCs2} votos")
+    elif votosDota2 == votosCs2 or votosDota2 == votosLol or votosDota2 == votosValorant:
+        return print(f"Empate com {votosDota2} votos")
+    elif votosLol == votosCs2 or votosLol == votosDota2 or votosLol == votosValorant:
+        return print(f"Empate com {votosLol} votos")
+    else:
+        votosValorant == votosCs2 or votosValorant == votosDota2 or votosValorant == votosLol
+        return print(f"Empate com {votosValorant} votos")
+while True:
+    menu()
+    listaCs2 = ['CS2', votosCs2, mediaCs2]
+    listaDota2 = ['Dota 2', votosDota2, mediaDota2]
+    listaLol = ['LOL', votosLol, mediaLol]
+    listaValorant = ['Valorant', votosValorant, mediaValorant]
+    escolha = int(input("Insira sua escolha: "))
+    if escolha == 1:
+        votosCs2 += 1
+        votosGeral += 1
+        idade = int(input("Insira sua idade: "))
+        idadeCs2 += idade
+        idadeGeral += idade
+        mediaCs2 = idadeCs2/votosCs2
+    elif escolha == 2:
+        votosDota2 += 1
+        votosGeral += 1
+        idade = int(input("Insira sua idade: "))
+        idadeDota2 += idade
+        idadeGeral += idade
+        mediaDota2 = idadeDota2/votosDota2
+    elif escolha == 3:
+        votosLol += 1
+        votosGeral += 1
+        idade = int(input("Insira sua idade: "))
+        idadeLol += idade
+        idadeGeral += idade
+        mediaLol = idadeLol/votosLol
+    elif escolha == 4:
+        votosValorant += 1
+        votosGeral += 1
+        idade = int(input("Insira sua idade: "))
+        idadeValorant += idade
+        idadeGeral += idade
+        mediaValorant = idadeValorant/votosValorant
+    elif escolha == 5:
+        mediaGeral = idadeGeral/votosGeral
+        print(listaCs2)
+        print(listaDota2)
+        print(listaLol)
+        print(listaValorant)
+        print(f"Total de votos: {votosGeral}, Média de idade: {mediaGeral}")
+        maior()
+        menor()
+        empate()
+        print("Tchau, até a próxima...")
+        break
+    else:
+        print("Opcão inválida, insira novamente")
+        continue
