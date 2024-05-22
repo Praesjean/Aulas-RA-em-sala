@@ -1,0 +1,17 @@
+linha0 = [1, 0, 0]
+linha1 = [0, 1, 0]
+linha2 = [0, 0, 1]
+
+matriz = [linha0, linha1, linha2]
+print("Matriz como lista...")
+print(matriz)
+
+print("Cada linha da matriz é uma lista:")
+print(matriz[0])
+print(matriz[1])
+print(matriz[2])
+
+print("Diagonal principal...")
+print(matriz[0][0])
+print(matriz[1][1])
+print(matriz[2][2])
